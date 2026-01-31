@@ -33,8 +33,8 @@ export const productTableColumns: ColumnDef<Product>[] = [
         cell: ({ row }) => {
             const product = row.original
             const label = getStatusLabel(product.status);
-            return <Badge variant={product.stock > 0 ? 'default' : 'outline'}>
-                <Circle size={12} className={product.stock > 0 ? 'fill-primary-foreground' : 'fill-destructive-foreground'} />
+            return <Badge className="gap-1" variant={product.stock > 0 ? 'default' : 'outline'}>
+                <Circle size={12} className= {product.stock > 0 ? 'fill-primary-foreground' : 'fill-destructive-foreground'} />
                 {label}</Badge>
         }
     },
